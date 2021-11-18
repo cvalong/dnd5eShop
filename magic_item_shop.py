@@ -14,20 +14,20 @@ class magic_item_shop:
 
                 self.item_stock = item_stock
         
-location_dict = {1: "Thorp", 2: "Hamlet", 3: "Village", 4: "Small Town", 5: "Large Town", 
-                6: "Small City", 7: "Large_City", 8: "Metropolis"}
+location_list = ["Thorp", "Hamlet", "Village", "Small Town", "Large Town", 
+                "Small City", "Large_City", "Metropolis"]
 
-shop_type_dict = {1: "Trader", 2: "Armorer", 3: "Weaponsmith",
-                4: "Alchemist", 5: "Scribe", 6: "Wandwright"}
+shop_type_list =["Trader", "Armorer", "Weaponsmith",
+                "Alchemist", "Scribe", "Wandwright"]
 
-def random_selector(dict, start_index= 1):
-        return dict[randint(start_index, len(dict))]
+def random_selector(list, start_index= 0):
+        return list[randint(start_index, len(list)-1)]
 
 def random_location():
-        return random_selector(location_dict)
+        return random_selector(location_list)
 
 def random_shop_type():
-        return random_selector(shop_type_dict)
+        return random_selector(shop_type_list)
 
 def random_item():
         pass
@@ -46,5 +46,5 @@ def csv_reader(sheet):
 def stock_list_generator():
         pass
 
-csv_contents = csv_reader('test_items_dungeons_5e.csv')
-print(csv_contents)
+items_header, items_rows = csv_reader('test_items_dungeons_5e.csv')
+print(random_selector(items_rows))
