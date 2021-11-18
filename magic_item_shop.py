@@ -19,8 +19,8 @@ location_dict = {1: "Thorp", 2: "Hamlet", 3: "Village", 4: "Small Town", 5: "Lar
 shop_type_dict = {1: "Trader", 2: "Armorer", 3: "Weaponsmith",
                 4: "Alchemist", 5: "Scribe", 6: "Wandwright"}
 
-def random_selector(dict):
-        return dict[randint(1,len(dict))]
+def random_selector(dict, start_index= 1):
+        return dict[randint(start_index,len(dict))]
 
 def random_location():
         return random_selector(location_dict)
