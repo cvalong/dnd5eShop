@@ -33,3 +33,18 @@ Create a String Variable for shop_description
 Create a String Variable for shopkeeper
 Create an empty list or dictionary for items
 '''
+
+from magic_item_shop import magic_item_shop, random_location, random_shop_type
+
+#initialization
+magic_shop = magic_item_shop("Benny's Booming Bargains", "Metropolis", "Armorer")
+# magic_shop_location = magic_shop.location
+# magic_shop_type = magic_shop.shop_type
+# magic_shop_location_desc = magic_shop.location_description
+# magic_shop_shop_desc = magic_shop.shop_description
+# magic_shop_shopkeeper = magic_shop.shopkeeper
+# magic_shop_stock_list = magic_shop.item_stock
+
+# print(magic_shop.__dict__)
+print(random_location())
+print(random_shop_type())
