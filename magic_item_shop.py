@@ -1,3 +1,4 @@
+import csv
 from random import randint
 
 class magic_item_shop:
@@ -20,7 +21,7 @@ shop_type_dict = {1: "Trader", 2: "Armorer", 3: "Weaponsmith",
                 4: "Alchemist", 5: "Scribe", 6: "Wandwright"}
 
 def random_selector(dict, start_index= 1):
-        return dict[randint(start_index,len(dict))]
+        return dict[randint(start_index, len(dict))]
 
 def random_location():
         return random_selector(location_dict)
@@ -31,8 +32,19 @@ def random_shop_type():
 def random_item():
         pass
 
-def stock_reader():
-        pass
+def csv_reader(sheet):
+        file = open(sheet)
+        csvreader = csv.reader(file)
+        header =[]
+        header = next(csvreader)
+        rows =[]
+        for row in csvreader:
+                rows.append(row)
+        file.close()
+        return header, rows
 
 def stock_list_generator():
         pass
+
+csv_contents = csv_reader('test_items_dungeons_5e.csv')
+print(csv_contents)
