@@ -10,6 +10,7 @@ class magic_item_shop:
         self.location_description = location_description
         self.shop_description = shop_description
         self.shopkeeper = shopkeeper
+        
         self.item_stock = item_stock
 
 location_dict = {1: "Thorp", 2: "Hamlet", 3: "Village", 4: "Small Town", 5: "Large Town", 

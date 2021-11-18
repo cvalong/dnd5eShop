@@ -1,0 +1,8 @@
+item,type,attunement,rarity,class_restriction,description,book_location,price
+,,TRUE,uncommon,,,,
+,,FALSE,common,,,,
+,,TRUE,rare,,,,
+,,TRUE,very rare,,,,
+,,TRUE,legendary,,,,
+,,FALSE,uncommon,,,,
+,,TRUE,common,,,,

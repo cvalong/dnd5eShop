@@ -34,7 +34,7 @@ Create a String Variable for shopkeeper
 Create an empty list or dictionary for items
 '''
 
-from magic_item_shop import magic_item_shop, random_location, random_shop_type
+from magic_item_shop import magic_item_shop
 
 #initialization
 magic_shop = magic_item_shop("Benny's Booming Bargains")
